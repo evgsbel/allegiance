@@ -14,12 +14,16 @@
     -webkit-box-shadow: 0 0 0.625rem 0 rgba(0,0,0,.1);
     box-shadow: 0 0 0.625rem 0 rgba(0,0,0,.1);
     transition: top .3s linear;
-    .header__slogan,
+    .header__slogan p,
     .header-contacts__works {
       display: none;
     }
     .logo img,
     .burger {
+      transform: scale(0.8);
+    }
+    .header__slogan svg {
+      fill: #fff;
       transform: scale(0.8);
     }
     .header-contacts__phone {
@@ -33,6 +37,10 @@
       margin-top: 10px;
       font-size: 12px;
       font-weight: 300;
+    }
+    svg {
+      transition: fill .3s linear, transform .3s linear;
+      fill: #000;
     }
   }
   &__btn {
@@ -341,3 +349,5 @@
   }
   }
 }
+
+

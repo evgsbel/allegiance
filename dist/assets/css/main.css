@@ -11937,12 +11937,17 @@ h2 span,
   -webkit-transition: top 0.3s linear;
   transition: top 0.3s linear;
 }
-.header_fixed .header__slogan,
+.header_fixed .header__slogan p,
 .header_fixed .header-contacts__works {
   display: none;
 }
 .header_fixed .logo img,
 .header_fixed .burger {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+.header_fixed .header__slogan svg {
+  fill: #fff;
   -webkit-transform: scale(0.8);
           transform: scale(0.8);
 }
@@ -11957,6 +11962,13 @@ h2 span,
   margin-top: 10px;
   font-size: 12px;
   font-weight: 300;
+}
+.header__slogan svg {
+  -webkit-transition: fill 0.3s linear, -webkit-transform 0.3s linear;
+  transition: fill 0.3s linear, -webkit-transform 0.3s linear;
+  transition: fill 0.3s linear, transform 0.3s linear;
+  transition: fill 0.3s linear, transform 0.3s linear, -webkit-transform 0.3s linear;
+  fill: #000;
 }
 .header__btn {
   margin-left: 20px;
@@ -12992,6 +13004,72 @@ h2 span,
   height: 720px;
   width: 720px;
   vertical-align: top;
+}
+
+.video-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-box iframe {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 0;
+  height: 0;
+  z-index: -1;
+}
+
+.video-content {
+  position: relative;
+  color: #fff;
+  padding: 50px;
+  font-size: 20px;
+  height: 80vh;
+}
+
+.video-content:before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+}
+
+.question {
+  background-color: #f8f5f3;
+  padding: 50px 0;
+  color: #333;
+}
+.question_white {
+  background-color: #fff;
+}
+.question__title {
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.question__img {
+  border-radius: 20px;
+  height: 100%;
+}
+.question ul {
+  list-style: disc;
+  font-size: 18px;
+  padding-left: 40px;
+}
+.question li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.question p {
+  font-size: 18px;
+}
+.question p:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=scss */
