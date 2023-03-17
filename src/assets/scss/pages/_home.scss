@@ -207,14 +207,7 @@
   }
 }
 
-.video-block {
-  background-color: #f6f8fb;
-  padding: 50px 0;
-  &__video {
-    width: 100%;
-    height: 100%;
-  }
-}
+
 
 .book {
   position: relative;
@@ -315,23 +308,7 @@
 
   }
   &__btn {
-    background-color: #B5965A;
-    color: #fff;
-    height: 60px;
-    width: 280px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    border-radius: 30px;
     margin: 0 auto 50px;
-    text-transform: uppercase;
-    font-weight: bold;
-    transition: background-color 0.3s linear;
-    &:hover {
-      background-color: #425479;
-    }
   }
 }
 
@@ -362,7 +339,7 @@
     text-transform: uppercase;
     &_left {
       color: #fff;
-      padding-left: 40px;
+      padding-left: 60px;
       width: 41%;
       z-index: 1;
       &::before {
@@ -373,7 +350,7 @@
         left: -10px;
         top: 0;
         height: 105%;
-        width: 110%;
+        width: 125%;
         -moz-transform: skew(-32deg);
         -ms-transform: skew(-32deg);
         -webkit-transform: skew(-32deg);
@@ -529,6 +506,17 @@
 .invitation {
   padding: 50px 0;
   background-color: #011436;
+  &__title {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 45px;
+    text-align: center;
+    span {
+      color: #ffcc00;
+    }
+  }
   &__container {
     background-image: url('../img/inv-bg.jpg');
     background-repeat: no-repeat;
@@ -554,6 +542,10 @@
   }
   &__icon {
     flex: 0 1 auto;
+  }
+  &__btn {
+    margin: 0 auto;
+    display: block;
   }
 }
 
@@ -738,6 +730,7 @@
     color: #fff;
     font-weight: 500;
     margin-bottom: 80px;
+    text-transform: uppercase;
   }
   &__wrapper {
     display: flex;
@@ -798,39 +791,6 @@
   }
 }
 
-
-.video-box {
-  position: relative;
-  overflow: hidden;
-}
-.video-box iframe {
-  position: absolute;
-  top: 0px;
-  left: 0;
-  width: 0;
-  height: 0;
-  z-index: -1;
-}
-.video-content {
-  position: relative;
-  color: #fff;
-  padding: 50px;
-  font-size: 20px;
-  height: 80vh;
-}
-.video-content:before {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: #000;
-  opacity: 0.5;
-}
-
-
 .question {
   background-color: #f8f5f3;
   padding: 50px 0;
@@ -864,5 +824,10 @@
     &:not(:last-child) {
       margin-bottom: 20px;
     }
+  }
+  &__video {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
   }
 }
