@@ -67,6 +67,9 @@
     }
     &:hover {
       opacity: 0.5;
+      @include r(768) {
+        opacity: 1;
+      }
     }
     p {
       font-size: 12px;
@@ -340,6 +343,9 @@
   transition: transform .6s ease;
   @include r(960) {
     width: 60vw;
+  }
+  @include r(576) {
+    width: 80vw;
   }
   &.is-open {
     transform: translateX(0);

@@ -12093,6 +12093,11 @@ h2 span,
 .header__btn:hover {
   opacity: 0.5;
 }
+@media only screen and (max-width: 768px) {
+  .header__btn:hover {
+    opacity: 1;
+  }
+}
 .header__btn p {
   font-size: 12px;
 }
@@ -12280,6 +12285,11 @@ h2 span,
 @media only screen and (max-width: 960px) {
   .nav {
     width: 60vw;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .nav {
+    width: 80vw;
   }
 }
 .nav.is-open {
@@ -13297,6 +13307,11 @@ h2 span,
   margin-bottom: 80px;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 576px) {
+  .contacts__title {
+    margin-bottom: 40px;
+  }
+}
 .contacts__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13350,6 +13365,11 @@ h2 span,
     -webkit-box-flex: 0;
         -ms-flex: 0 0 50%;
             flex: 0 0 50%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .contacts__item {
+    margin-bottom: 10px;
   }
 }
 .contacts__item:not(:last-child) {

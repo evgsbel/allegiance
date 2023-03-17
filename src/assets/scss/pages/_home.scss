@@ -830,6 +830,9 @@
     font-weight: 500;
     margin-bottom: 80px;
     text-transform: uppercase;
+    @include r(576) {
+      margin-bottom: 40px;
+    }
   }
   &__wrapper {
     display: flex;
@@ -855,6 +858,9 @@
     gap: 0 8px;
     @include r(1024) {
       flex: 0 0 50%;
+    }
+    @include r(576) {
+      margin-bottom: 10px;
     }
     &:not(:last-child) {
     margin-bottom: 25px;
