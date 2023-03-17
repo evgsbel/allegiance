@@ -4,11 +4,16 @@
 
 
 //fancybox
+$(()=>{
 
-  $('[data-fancybox=""]').fancybox({
-    // Options will go here
+  $('[data-fancybox]').fancybox({
+
+    animationEffect: "zoom-in-out",
+    animationDuration: 600,
+    transitionEffect: "rotate",
+    transitionDuration: 400,
   });
-
+})
 
 // tabs
 
@@ -91,3 +96,40 @@ $(() => {
   }
 })
 
+// hide menu
+// mobile menu
+$(() => {
+  const btnMenu = document.querySelector('.header__btn');
+ // const body = document.querySelector('body');
+  const menu = document.querySelector('.nav');
+  const menuLink = document.querySelectorAll('.nav .nav__link');
+
+  const toggleMenu = function () {
+    menu.classList.toggle('is-open');
+    // menu.style.height = heroHeight + headerHeight + 'px'
+    btnMenu.classList.toggle('is-active');
+   // body.classList.toggle('opened-menu');
+  };
+
+  btnMenu.addEventListener('click', function (e) {
+    e.stopPropagation();
+    toggleMenu();
+  });
+
+  const closeBtn = document.querySelector('.nav__close');
+  const closeMenu = function () {
+    menu.classList.remove('is-open');
+    //body.classList.remove('opened-menu');
+    btnMenu.classList.remove('is-active');
+  };
+
+  menuLink.forEach(function (el) {
+    el.addEventListener('click', function (event) {
+      closeMenu();
+    })
+  })
+  closeBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    closeMenu();
+  });
+});

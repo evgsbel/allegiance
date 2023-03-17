@@ -10,9 +10,13 @@ Inputmask({
 }).mask('.phone-mask');
 
 //fancybox
-
-$('[data-fancybox=""]').fancybox({
-  // Options will go here
+$(function () {
+  $('[data-fancybox]').fancybox({
+    animationEffect: "zoom-in-out",
+    animationDuration: 600,
+    transitionEffect: "rotate",
+    transitionDuration: 400
+  });
 });
 
 // tabs
@@ -91,4 +95,39 @@ $(function () {
   } finally {
     _iterator.f();
   }
+});
+
+// hide menu
+// mobile menu
+$(function () {
+  var btnMenu = document.querySelector('.header__btn');
+  // const body = document.querySelector('body');
+  var menu = document.querySelector('.nav');
+  var menuLink = document.querySelectorAll('.nav .nav__link');
+  var toggleMenu = function toggleMenu() {
+    menu.classList.toggle('is-open');
+    // menu.style.height = heroHeight + headerHeight + 'px'
+    btnMenu.classList.toggle('is-active');
+    // body.classList.toggle('opened-menu');
+  };
+
+  btnMenu.addEventListener('click', function (e) {
+    e.stopPropagation();
+    toggleMenu();
+  });
+  var closeBtn = document.querySelector('.nav__close');
+  var closeMenu = function closeMenu() {
+    menu.classList.remove('is-open');
+    //body.classList.remove('opened-menu');
+    btnMenu.classList.remove('is-active');
+  };
+  menuLink.forEach(function (el) {
+    el.addEventListener('click', function (event) {
+      closeMenu();
+    });
+  });
+  closeBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    closeMenu();
+  });
 });
