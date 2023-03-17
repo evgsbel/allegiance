@@ -213,26 +213,14 @@
   }
   &__subtitle {
     font-size: 22px;
+    margin-bottom: 80px;
   }
   &__wrapper {
     padding: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     height: 678px;
   }
   &__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    background-color: #000;
-    height: 55px;
-    width: 216px;
-    transition: opacity .3s ease-in-out;
-    &:hover {
-      opacity: 0.8;
-    }
+
   }
 }
 

@@ -82,10 +82,29 @@ img {
   }
 }
 
-
-
-
-
+.btn {
+  color: #fff;
+  background: #B5965A;
+  border-radius: 100px;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s linear;
+  width: 280px;
+  height: 60px;
+  &:hover {
+    color: #fff;
+    background-color: #425479;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
 
 
 
