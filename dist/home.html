@@ -20,18 +20,18 @@
     <header class="header">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-2">
+          <div class="col-md-2 col-4 order-1">
             <a href="" class="logo header__logo">
               <img src="assets/img/logo.png" alt="">
             </a>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 col-3 order-3 order-md-2">
             <div class="header__btn">
             <button class="btn-reset burger"><span></span><span></span><span></span></button>
               <p>Меню</p>
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 col-5 order-2 order-md-3">
             <div class="header__slogan">
               <svg width="139" height="15">
                 <use xlink:href="assets/img/sprite.svg#damac-logo"></use>
@@ -41,7 +41,7 @@
     
             </div>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4 d-md-block d-none order-md-4">
             <div class="header__contacts header-contacts">
     <p class="header-contacts__caption">Круглосуточная горячая линия:</p>
               <a href="" class="header-contacts__phone">+7(495) 111-22-33</a>
@@ -67,12 +67,37 @@
         <li class="nav__item"><a href="#five" class="nav__link">Пункт меню 5</a></li>
         <li class="nav__item"><a href="#six" class="nav__link">Пункт меню 6</a></li>
         <li class="nav__item"><a href="#seven" class="nav__link">Пункт меню 7</a></li>
+    <!--    <li class="nav__item"><a href="#eight" class="nav__link">Пункт меню 8</a></li>-->
+    <!--    <li class="nav__item"><a href="#nine" class="nav__link">Пункт меню 9</a></li>-->
+    <!--    <li class="nav__item"><a href="#ten" class="nav__link">Пункт меню 10</a></li>-->
+    <!--    <li class="nav__item"><a href="#eleven" class="nav__link">Пункт меню 11</a></li>-->
+    <!--    <li class="nav__item"><a href="#twelve" class="nav__link">Пункт меню 12</a></li>-->
+    <!--    <li class="nav__item"><a href="#thirteen" class="nav__link">Пункт меню 13</a></li>-->
+    <!--    <li class="nav__item"><a href="#fourteen" class="nav__link">Пункт меню 14</a></li>-->
+    <!--    <li class="nav__item"><a href="#fifteen" class="nav__link">Пункт меню 15</a></li>-->
+    <!--    <li class="nav__item"><a href="#sixteen" class="nav__link">Пункт меню 16</a></li>-->
       </ul>
+      <div class="header__contacts header-contacts">
+        <p class="header-contacts__caption">Круглосуточная горячая линия:</p>
+        <a href="" class="header-contacts__phone">+7(495) 111-22-33</a>
+        <div class="header-contacts__works">Сейчас работаем</div>
+      </div>
     </nav>
     <main role="main" class="main">
         
     </main>
     <div class="js-stop-header"></div>
+    <div class="popup hero-form" id="popup">
+      <form action="" class="hero__form">
+        <div class="hero-form__wrapper">
+          <h2 class="hero-form__caption popup__caption">Получить презентацию партнерской программы</h2>
+          <label for="hero-phone" class="hero-form__label">
+            <input type="text" class="phone-mask hero-form__input" id="hero-phone" name="hero-phone" placeholder="+7 (___) ___ - __ - __" inputmode="text">
+          </label>
+          <button type="submit" class="hero-form__submit btn btn-reset">Скачать презентацию</button>
+        </div>
+      </form>
+    </div>
     <!-- build:js -->
     <script src="assets/vendor/js/jquery.js"></script>
     <script src="assets/vendor/js/popper.js"></script>

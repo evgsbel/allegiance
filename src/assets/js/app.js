@@ -1,13 +1,10 @@
 //masked inputs
-
   Inputmask({"mask": "+7 (999) 999 - 99 - 99"}).mask('.phone-mask');
-
 
 //fancybox
 $(()=>{
 
   $('[data-fancybox]').fancybox({
-
     animationEffect: "zoom-in-out",
     animationDuration: 600,
     transitionEffect: "rotate",
@@ -134,21 +131,6 @@ $(() => {
   });
 });
 
-// Play Video
-const $video = document.querySelector('.video-block__video')
-const observer = new window.IntersectionObserver(([entry]) => {
-  if (entry.isIntersecting) {
 
-    $video.play();
-    return
-  }
-  $video.pause();
-
-}, {
-  root: null,
-  threshold: 0.1, // set offset 0.1 means trigger if atleast 10% of element in viewport
-})
-
-observer.observe($video);
 
 

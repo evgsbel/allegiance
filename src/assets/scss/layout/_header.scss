@@ -39,10 +39,19 @@
       font-size: 12px;
       font-weight: 300;
       line-height: 1.2;
+      @include r(960) {
+        font-size: 10px;
+      }
+      @include r(576) {
+        display: none;
+      }
     }
     svg {
       transition: fill .3s linear, transform .3s linear;
       fill: #fff;
+      @include r(576) {
+        width: 100px;
+      }
     }
   }
   &__btn {
@@ -52,6 +61,10 @@
     gap: 0 5px;
     cursor: pointer;
     transition: opacity .3s linear;
+    @include r(768) {
+      margin-left: 0;
+      justify-content: flex-end;
+    }
     &:hover {
       opacity: 0.5;
     }
@@ -104,6 +117,9 @@
     font-weight: 500;
     font-size: 30px;
     transition: font-size .2s linear;
+    @include r(960) {
+      font-size: 25px;
+    }
   }
   &__works {
     display: inline-block;
@@ -322,6 +338,9 @@
   height: 100vh;
   transform: translateX(-100%);
   transition: transform .6s ease;
+  @include r(960) {
+    width: 60vw;
+  }
   &.is-open {
     transform: translateX(0);
   }
@@ -347,8 +366,14 @@
   &__item {
     transition: .3s linear;
     &:hover {
-    opacity: 0.5;
+      opacity: 0.5;
+    }
   }
+  .header-contacts {
+    width: 100%;
+    padding: 15px 0;
+    margin: auto 0 15px;
+    text-align: center;
   }
 }
 
