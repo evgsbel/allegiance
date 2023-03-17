@@ -183,28 +183,32 @@
 .book {
   position: relative;
   padding: 50px 80px;
-  background-color: #000;
+  background-color: #5F6774;
+  background-image: url('../img/book-bg-2.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
   color: #fff;
   &::after {
     content: '';
     position: absolute;
-    bottom: 50px;
-    right: 5px;
+    bottom: 0;
+    right: 0;
     background-image: url('../img/book-bg.png');
     background-repeat: no-repeat;
     width: 1200px;
-    height: 715px;
+    height: 100%;
   }
-  &__container {
-    background-color: #c09d75;
-  }
+  //&__container {
+  //  background-color: #c09d75;
+  //}
   &__title {
     margin-bottom: 30px;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 1.1;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
     text-align: left;
-    width: 700px;
+    width: 480px;
     max-width: 100%;
   }
   &__subtitle {
@@ -234,9 +238,10 @@
 
 .exhibition {
   padding: 50px 0;
-  background-image: url('../img/exhib-bg.jpg');
+  //background-image: url('../img/exhib-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #f6f8fb;
   &__title {
     display: block;
     font-size: 65px;
@@ -248,9 +253,9 @@
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    color: #fff;
+    color: #000;
     span {
-      color: #ffcc00;
+      color: #425479;
       font-weight: 500;
     }
   }
@@ -261,14 +266,12 @@
     margin: 0 auto 50px;
     width: 100%;
     text-align: center;
-    color: #ffcc00;
-    span {
-      color: #fff;
-    }
+    color: #000;
+
   }
   &__btn {
-    background-color: #ffcc00;
-    color: #091026;
+    background-color: #B5965A;
+    color: #fff;
     height: 60px;
     width: 280px;
     display: flex;
@@ -282,13 +285,13 @@
     font-weight: bold;
     transition: background-color 0.3s linear;
     &:hover {
-      background-color: #fff;
+      background-color: #425479;
     }
   }
 }
 
 .exhibition-heading {
-  border: 2px solid #ffcc00;
+  border: 2px solid #B5965A;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
@@ -313,12 +316,12 @@
     vertical-align: top;
     text-transform: uppercase;
     &_left {
-      color: #01112d;
+      color: #fff;
       padding-left: 40px;
       width: 41%;
       z-index: 1;
       &::before {
-        background-color: #ffcc00;
+        background-color: #B5965A;
         color: #01112d;
         content: "";
         position: absolute;
@@ -336,7 +339,7 @@
     }
     &_right {
       width: 59%;
-      color: #fff;
+      color: #000;
     }
   }
 }
@@ -355,7 +358,7 @@
     text-align: left;
   }
   &__numbers {
-    color: #ffcc00;
+    color: #425479;
     display: inline-block;
     font-size: 72px;
     font-weight: bold;
@@ -371,7 +374,7 @@
     padding-left: 9px;
     text-align: left;
     text-transform: uppercase;
-    color: #fff;
+    color: #000;
   }
 }
 .exhibition-address {
@@ -379,9 +382,9 @@
   padding-left: 24px;
   position: relative;
   text-align: left;
-  color: #ffcc00;;
+  color: #425479;;
   &::before {
-    border-left: 2px solid #ffcc00;
+    border-left: 2px solid #425479;
     content: "";
     position: absolute;
     left: 0;
@@ -395,19 +398,19 @@
     transform: rotate(18deg);
   }
   span {
-    color: #fff;
+    color: #000;
   }
 }
 
 .exhibition-list {
   position: relative;
-  background: linear-gradient(to left, rgba(1, 20, 54, 0), #011436, rgba(1, 20, 54, 0));
+  //background: linear-gradient(to left, rgba(1, 20, 54, 0), #011436, rgba(1, 20, 54, 0));
   display: flex;
   justify-content: space-between;
   padding: 40px 0;
-  color: #fff;
+  color: #000;
   &::before {
-    background: linear-gradient(to right, rgba(255, 204, 0, 0) 0%, #ffcc00 50%, rgba(255, 204, 0, 0) 100%);
+    background: linear-gradient(to right, rgba(255, 204, 0, 0) 0%, #425479 50%, rgba(255, 204, 0, 0) 100%);
     content: "";
     position: absolute;
     top: 0;
@@ -425,7 +428,7 @@
     padding-top: 8px;
     text-transform: uppercase;
     span {
-      color: #ffcc00;
+      color: #425479;
     }
   }
   &__place {
