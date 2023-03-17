@@ -11805,6 +11805,11 @@ img {
           box-shadow: none;
 }
 
+.wrapper {
+  position: relative;
+  z-index: 5;
+}
+
 @font-face {
   font-family: "Lato";
   src: local("Lato"), local("Lato-Light"), url("../fonts/../fonts/Lato-Light.woff2") format("woff2"), url("../fonts/../fonts/Lato-Light.woff") format("woff");
@@ -11956,13 +11961,14 @@ h2 span,
   left: 0;
   width: 100%;
   color: #fff;
+  z-index: 20;
 }
 .header_fixed {
   top: 0;
   position: fixed;
   z-index: 100;
   padding: 8px 0;
-  background: rgba(0, 0, 0, 0.8);
+  background-color: rgba(66, 84, 121, 0.8);
   color: white;
   -webkit-box-shadow: 0 0 0.625rem 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 0.625rem 0 rgba(0, 0, 0, 0.1);
@@ -12085,7 +12091,7 @@ h2 span,
   padding: 0 0.8em;
   padding-left: 22px;
   position: relative;
-  background-color: #00aa5b;
+  background-color: #B5965A;
   line-height: 1.5;
   font-size: 12px;
   color: #fff;
@@ -12182,7 +12188,7 @@ h2 span,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: rgba(0, 0, 0, 0.94);
+  background-color: rgba(66, 84, 121, 0.94);
   color: #fff;
   font-size: 23px;
   font-weight: 300;
@@ -12237,7 +12243,6 @@ h2 span,
 }
 
 .hero {
-  padding-top: 30vh;
   height: 100vh;
   background-image: url("../img/hero-bg.jpg");
   background-repeat: no-repeat;
@@ -12275,6 +12280,47 @@ h2 span,
   display: block;
   font-weight: 400;
   font-size: 16px;
+}
+
+.hero-video {
+  position: relative;
+  min-height: 100vh;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.hero-video__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero-video__body {
+  position: relative;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .hero-form {
@@ -12378,7 +12424,7 @@ h2 span,
 
 .catalog-item__heading {
   padding: 16px;
-  background-color: #484a4b;
+  background-color: #B5965A;
   color: #fff;
 }
 .catalog-item__caption {
@@ -12708,7 +12754,7 @@ h2 span,
   border-top: 1px solid rgba(202, 157, 117, 0.6);
 }
 .about__caption {
-  color: #000000;
+  color: #B5965A;
   font-size: 66px;
   line-height: 1.3;
 }
