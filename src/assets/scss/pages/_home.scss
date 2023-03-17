@@ -10,11 +10,19 @@
     line-height: 1.3;
     font-weight: 900;
     margin-bottom: 50px;
+    @include r(1024) {
+      font-size: 40px;
+      margin-top: 50px;
+    }
   }
   &__list {
     display: flex;
     gap: 0 40px;
     max-width: 75%;
+    @include r(1024) {
+      max-width: 100%;
+      margin-bottom: 50px;
+    }
     li {
       display: flex;
       flex-direction: column;
@@ -52,17 +60,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.5);
   }
 }
 .hero-form {
-  border: 3px solid white;
-  padding: 27px 44px;
-  border-radius: 8px;
-  -webkit-transform: translateZ(0);
-  -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
-  background-color: rgba(0, 0, 0, .5);
-  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgba(60,70,91,.8);
+  &__wrapper {
+    padding: 27px 44px;
+    text-align: center;
+    border: 1px solid #B5965A;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
   &__caption {
     font-weight: 500;
     font-size: 18px;
@@ -85,13 +97,6 @@
   &__submit {
     width: 100%;
     margin-bottom: 4px;
-    outline: none !important;
-    border-bottom: none;
-    font-size: 18px;
-    padding: 17px 0;
-    border-radius: 8px;
-    color: #333333;
-    background: rgba(0,191,255,1);
     display: block;
   }
   &__label {
@@ -202,6 +207,14 @@
   }
 }
 
+.video-block {
+  background-color: #f6f8fb;
+  padding: 50px 0;
+  &__video {
+    width: 100%;
+    height: 100%;
+  }
+}
 
 .book {
   position: relative;
@@ -212,6 +225,9 @@
   -webkit-background-size: cover;
   background-size: cover;
   color: #fff;
+  @include r(1024) {
+    padding-bottom: 0;
+  }
   &::after {
     content: '';
     position: absolute;
@@ -221,6 +237,12 @@
     background-repeat: no-repeat;
     width: 1200px;
     height: 100%;
+    @include r(1280) {
+      width: 1000px;
+    }
+    @include r(1024) {
+      content: none;
+    }
   }
   //&__container {
   //  background-color: #c09d75;
@@ -233,6 +255,12 @@
     text-align: left;
     width: 480px;
     max-width: 100%;
+    @include r(1280) {
+      width: 700px;
+    }
+    @include r(768) {
+      width: 100%;
+    }
   }
   &__subtitle {
     font-size: 22px;
@@ -241,6 +269,12 @@
   &__wrapper {
     padding: 80px;
     height: 678px;
+    position: relative;
+    z-index: 10;
+    @include r(1024) {
+      height: auto;
+      padding: 0;
+    }
   }
   &__btn {
 
@@ -757,6 +791,10 @@
     height: 720px;
     width: 720px;
     vertical-align: top;
+    @include r(1440) {
+      width: 580px;
+      height: 580px;
+    }
   }
 }
 
