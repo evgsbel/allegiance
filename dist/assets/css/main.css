@@ -12346,9 +12346,15 @@ h2 span,
   background-size: cover;
   color: #fff;
 }
+@media only screen and (max-width: 768px) {
+  .hero {
+    background-image: url("../img/hero-bg-mobile.jpg");
+  }
+}
 @media only screen and (max-width: 576px) {
   .hero {
     height: auto;
+    background-image: url("../img/hero-bg-mobile-2.jpg");
   }
 }
 .hero__title {
@@ -12366,9 +12372,27 @@ h2 span,
 }
 @media only screen and (max-width: 576px) {
   .hero__title {
-    font-size: 32px;
-    padding-top: 120px;
+    font-size: 28px;
+    padding-top: 40px;
+    margin-bottom: 20px;
   }
+}
+.hero__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+  gap: 0 15px;
+}
+.hero__item {
+  background-color: #B5965A;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 100px;
+  font-size: 14px;
 }
 .hero__list {
   display: -webkit-box;
@@ -12389,7 +12413,8 @@ h2 span,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 20px 0;
+    gap: 10px 0;
+    margin-bottom: 30px;
   }
 }
 .hero__list li {
@@ -12405,6 +12430,11 @@ h2 span,
   font-weight: 700;
   font-size: 22px;
 }
+@media only screen and (max-width: 576px) {
+  .hero__list p {
+    line-height: 1.1;
+  }
+}
 .hero__list p span {
   display: block;
   font-weight: 400;
@@ -12414,7 +12444,7 @@ h2 span,
 .hero-video {
   position: relative;
   min-height: 100vh;
-  height: 100%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12431,6 +12461,11 @@ h2 span,
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media only screen and (max-width: 768px) {
+  .hero-video__video {
+    display: none;
+  }
 }
 .hero-video__body {
   position: relative;
@@ -12459,6 +12494,13 @@ h2 span,
     padding-bottom: 20px;
   }
 }
+@media only screen and (max-width: 576px) {
+  .hero-video__body {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
 
 .hero-form {
   padding: 10px;
@@ -12470,6 +12512,11 @@ h2 span,
   text-align: center;
   border: 1px solid #B5965A;
   border-radius: 10px;
+}
+@media only screen and (max-width: 576px) {
+  .hero-form__wrapper {
+    padding: 17px 44px;
+  }
 }
 .hero-form__caption {
   font-weight: 500;
@@ -12488,6 +12535,11 @@ h2 span,
   margin-bottom: 12px;
   width: 100%;
   background-color: transparent;
+}
+@media only screen and (max-width: 576px) {
+  .hero-form__input {
+    padding: 10px 19px;
+  }
 }
 .hero-form__input::-webkit-input-placeholder {
   color: #fff;
@@ -12511,6 +12563,12 @@ h2 span,
   width: 100%;
   margin-bottom: 4px;
   display: block;
+}
+@media only screen and (max-width: 576px) {
+  .hero-form__submit {
+    min-height: 45px;
+    margin-bottom: 0;
+  }
 }
 .hero-form__label {
   width: 100%;
@@ -12547,6 +12605,7 @@ h2 span,
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
+  border-radius: 10px;
 }
 .catalog-first__wr {
   display: -webkit-box;
@@ -12558,6 +12617,7 @@ h2 span,
   padding: 120px 25px 25px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#000));
   background-image: linear-gradient(180deg, transparent, #000);
+  border-radius: 10px;
 }
 @media only screen and (max-width: 576px) {
   .catalog-first__wr {
@@ -12582,6 +12642,11 @@ h2 span,
   font-size: 13px;
 }
 
+.catalog-item {
+  -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
 .catalog-item__heading {
   padding: 16px;
   background-color: #B5965A;
@@ -12598,6 +12663,10 @@ h2 span,
   background: #fff;
   padding: 12px;
   padding-bottom: 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 .catalog-item__list-item {
   display: -webkit-box;
@@ -12622,6 +12691,8 @@ h2 span,
   height: 183px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .tabs {
@@ -12762,7 +12833,9 @@ h2 span,
 }
 @media only screen and (max-width: 576px) {
   .exhibition__title {
-    font-size: 32px;
+    font-size: 28px;
+    padding-top: 0;
+    margin-bottom: 20px;
   }
 }
 .exhibition__title span {
@@ -12787,10 +12860,17 @@ h2 span,
 @media only screen and (max-width: 576px) {
   .exhibition__subtitle {
     font-size: 23px;
+    padding-top: 0;
+    margin-bottom: 20px;
   }
 }
 .exhibition__btn {
   margin: 0 auto 50px;
+}
+@media only screen and (max-width: 576px) {
+  .exhibition__btn {
+    margin-bottom: 20px;
+  }
 }
 
 .exhibition-heading {
@@ -12806,6 +12886,11 @@ h2 span,
   max-width: 100%;
   text-align: center;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 576px) {
+  .exhibition-heading {
+    margin-bottom: 20px;
+  }
 }
 .exhibition-heading__col {
   display: inline-block;
@@ -12880,6 +12965,8 @@ h2 span,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-top: 0;
+    margin-bottom: 20px;
   }
 }
 .exhibition-date__inner {
@@ -12896,7 +12983,7 @@ h2 span,
 }
 @media only screen and (max-width: 576px) {
   .exhibition-date__numbers {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 .exhibition-date__numbers span {
@@ -12910,6 +12997,11 @@ h2 span,
   text-align: left;
   text-transform: uppercase;
   color: #000;
+}
+@media only screen and (max-width: 576px) {
+  .exhibition-date__month {
+    font-size: 16px;
+  }
 }
 
 .exhibition-address {
@@ -13029,7 +13121,8 @@ h2 span,
 
 .invitation {
   padding: 50px 0;
-  background-color: #011436;
+  background-color: #5F6774;
+  background-image: url("../img/book-bg-2.png");
 }
 .invitation__title {
   color: #fff;
@@ -13045,10 +13138,10 @@ h2 span,
   }
 }
 .invitation__title span {
-  color: #ffcc00;
+  color: #B5965A;
 }
 .invitation__container {
-  background-image: url("../img/inv-bg.jpg");
+  background-color: #425479;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 48px 15px 30px;

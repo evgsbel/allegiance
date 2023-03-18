@@ -225,6 +225,16 @@ function copyImagesMin() {
     .pipe(browserSync.stream());
 }
 
+// COPIES VIDEO TO DIST
+function copyVideo() {
+  log(chalk.red.bold('---------------COPY IMAGES---------------'));
+  return src('src/assets/video/**/*.+(mp4|webm)')
+    .pipe(newer('dist/assets/video/'))
+    // .pipe(imagemin())
+    .pipe(dest('dist/assets/video/'))
+    .pipe(browserSync.stream());
+}
+
 // PLACES FONT FILES IN THE DIST FOLDER
 function copyFont() {
   log(chalk.red.bold('---------------COPYING FONTS INTO DIST FOLDER---------------'));
@@ -355,10 +365,10 @@ function minifyCSS() {
 }
 
 // DEVELOPMENT
-exports.development = series(cleanDist, copyFont, copyImagesMin, svgSprites, compileHTML, compileSCSS, cssVendor, jsVendor, compileJS, resetPages, prettyHTML,  browserSyncInit, watchFiles);
+exports.development = series(cleanDist, copyFont, copyImagesMin, copyVideo, svgSprites, compileHTML, compileSCSS, cssVendor, jsVendor, compileJS, resetPages, prettyHTML,  browserSyncInit, watchFiles);
 
 // PRODUCTION
-exports.production = series(cleanDist, copyFont, copyImages, svgSprites, compileHTML, compileSCSS, cssVendor, purgeCSS, minifyCSS, jsVendor, concatScripts, minifyScripts, renameSources, prettyHTML, generateDocs, browserSyncInit);
+exports.production = series(cleanDist, copyFont, copyImages, copyVideo, svgSprites, compileHTML, compileSCSS, cssVendor, purgeCSS, minifyCSS, jsVendor, concatScripts, minifyScripts, renameSources, prettyHTML, generateDocs, browserSyncInit);
 
 // RUN ALL LINTERS
 exports.lint = series(htmlLint, scssLint, jsLint);
