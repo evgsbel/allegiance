@@ -9,14 +9,15 @@ Inputmask({
 }).mask('.phone-mask');
 
 //fancybox
-$(function () {
-  $('[data-fancybox]').fancybox({
-    animationEffect: "zoom-in-out",
-    animationDuration: 600,
-    transitionEffect: "rotate",
-    transitionDuration: 400
-  });
-});
+// $(()=>{
+//
+//   $('[data-fancybox]').fancybox({
+//     animationEffect: "zoom-in-out",
+//     animationDuration: 600,
+//     transitionEffect: "rotate",
+//     transitionDuration: 400,
+//   });
+// })
 
 // tabs
 

@@ -119,7 +119,7 @@ function jsVendor() {
     'node_modules/popper.js/dist/umd/popper.js',
     'node_modules/bootstrap/dist/js/bootstrap.js',
     'node_modules/swiper/swiper-bundle.js',
-    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
+    //'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
     'node_modules/inputmask/dist/inputmask.min.js',
   ])
     .pipe(dest('dist/assets/vendor/js'))
@@ -131,7 +131,7 @@ function cssVendor() {
   log(chalk.red.bold('---------------COPY CSS VENDOR FILES INTO DIST---------------'));
   return src([
     'node_modules/animate.css/animate.css',
-    'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
+    //'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css',
     'node_modules/swiper/swiper.min.css',
   ])
     .pipe(dest('dist/assets/vendor/css'))
@@ -311,7 +311,7 @@ function concatScripts() {
     'dist/assets/vendor/js/popper.js',
     'dist/assets/vendor/js/bootstrap.js',
     'dist/assets/vendor/js/swiper-bundle.js',
-    'dist/assets/vendor/js/jquery.fancybox.min.js',
+    // 'dist/assets/vendor/js/jquery.fancybox.min.js',
     'dist/assets/vendor/js/inputmask.min.js',
     'src/assets/js/util/*',
     'src/assets/js/*'

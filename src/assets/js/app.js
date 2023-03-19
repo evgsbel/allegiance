@@ -2,15 +2,15 @@
   Inputmask({"mask": "+7 (999) 999 - 99 - 99"}).mask('.phone-mask');
 
 //fancybox
-$(()=>{
-
-  $('[data-fancybox]').fancybox({
-    animationEffect: "zoom-in-out",
-    animationDuration: 600,
-    transitionEffect: "rotate",
-    transitionDuration: 400,
-  });
-})
+// $(()=>{
+//
+//   $('[data-fancybox]').fancybox({
+//     animationEffect: "zoom-in-out",
+//     animationDuration: 600,
+//     transitionEffect: "rotate",
+//     transitionDuration: 400,
+//   });
+// })
 
 // tabs
 
